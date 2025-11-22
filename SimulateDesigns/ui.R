@@ -10,9 +10,14 @@ ui <- dashboardPage(
     sidebarMenu(
       menuItem("Home", tabName = "home", icon = icon("home")),
       # menuItem("Confidence intervals", tabName = "CI", icon = icon("chart-bar")),
-      menuItem("Two-arms designs", tabName = "two-arms", icon = icon("chart-bar")),
-      menuItem("Multi-arms designs", tabName = "multi-arms", icon = icon("chart-bar")),
-      menuItem("Longitudinal designs", tabName = "longitudinal", icon = icon("chart-bar"))
+      menuItem("Two-arms designs", tabName = "two-arms", icon = icon("vials")),
+      menuItem("Multi-arms designs", tabName = "multi-arms", icon = icon("sitemap")),
+      menuItem("Longitudinal designs", tabName = "longitudinal", icon = icon("chart-line")),
+      br(),
+      menuItem("Give us some feedback", tabName = "feedback", icon = icon("comment-dots")),
+      menuItem("Our group", tabName = "group", icon = icon("users"))
+      
+      
     )
   ),
   
@@ -86,7 +91,7 @@ ui <- dashboardPage(
                                medical devices, or treatment protocols by directly comparing outcomes between 
                                the two arms."))),
                 column(6,
-                       img(src = "img/team.jpg", width = "100%") ),
+                       img(src = "img/two_arms.png", width = "100%") ),
               hr(),
               br(),br(),br(),
               box(title="Parallel two-arms clinical trial: importance of the control group",width = 12,

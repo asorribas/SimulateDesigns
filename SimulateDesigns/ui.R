@@ -138,9 +138,19 @@ ui <- dashboardPage(
                           influence sample size, interpretation, and regulatory acceptance of the results.")),
                            br(),br(),
                            tags$a(
+                             href = "papers/Teaching_Statistics_2025.pdf",
+                             target = "_blank",     # Open in new tab/window
+                             style="width:400px",
+                             class = "btn btn-primary",
+                             HTML("P. Sandoval, E.Vilaprinyo, R. Alves, and A. Sorribas,<br>
+                             Beyond statistical power in designing clinical trials: <br>Shiny/R
+                             apps to the rescue, <br>Teach. Stat. (2025), 1–13,DOI 10.1111/test.12403")
+                           ),
+                           tags$a(
                              href = "https://irblleida-biostatistics.shinyapps.io/Clinical-Trial-Two-Arms-Binomial/",
                              target = "_blank",
                              class = "btn btn-success",
+                             style = "font-size: 24px;",
                              "Go to simulator"
                            )),
                     
@@ -158,7 +168,10 @@ ui <- dashboardPage(
               )
       )
       ),
-      tabItem(tabName = "multi-arms")
+      tabItem(tabName = "multi-arms",
+              img(src = "img/muticentric.png", width = "100%")),
+      tabItem(tabName = "longitudinal",
+              img(src = "img/longitudinal.png", width = "100%"))
     ),
     tags$footer(class = "main-footer",
     box(title='Funding',solidHeader = T,width = 8,status='primary',

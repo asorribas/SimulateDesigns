@@ -164,11 +164,24 @@ ui <- dashboardPage(
                   )
               ),
               box(title="Parallel two-arms clinical trial: quantitative outcome",width = 12,
-                  status="warning",solidHeader = T,collapsible = T, collapsed = T,
+                  status="primary",solidHeader = T,collapsible = T, collapsed = T,
                   fluidPage(
                     column(7,
-                           h3(HTML("Not yet implemented")),
-                           )
+                           h3(HTML("A shiny app for understanding the evaluation of a clinical trial 
+                                   with two branches (control and treatment) and a quantitaive (normal) output. 
+                                   The statistical technique involves estimating the difference in population means 
+                                   by analyzing the results in two samples of the groups bein compared.")),
+                           br(),br(),
+                           tags$a(
+                             href = "https://irblleida-biostatistics.shinyapps.io/Compare2GroupsQuantitative/",
+                             target = "_blank",
+                             class = "btn btn-success",
+                             style = "font-size: 24px;",
+                             "Go to simulator"
+                           )),
+                    
+                    column(5,
+                           img(src = "img/TwoGroupsDesign.jpg", width = "100%") )
                   )
               )
               )
